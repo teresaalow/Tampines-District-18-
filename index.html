@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>District 18 · Tampines | Your Complete Property Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2332;
+    --green: #2a7d5a;
+    --green-light: #35a070;
+    --green-pale: #edf7f3;
+    --accent: #2a7d5a;
+    --gold: #e8a045;
+    --white: #ffffff;
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --grey: #6b7280;
+    --grey-mid: #9ca3af;
+    --grey-light: #f1f3f6;
+    --border: #e5e7eb;
+    --shadow: 0 2px 16px rgba(0,0,0,0.07);
+    --shadow-md: 0 4px 24px rgba(0,0,0,0.10);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--navy);
+    overflow-x: hidden;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem; height: 62px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 600; color: var(--green);
+    letter-spacing: 0.03em; text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--grey); font-size: 0.82rem; text-decoration: none;
+    letter-spacing: 0.04em; text-transform: uppercase; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--green); }
+  .nav-cta {
+    background: var(--green); color: var(--white);
+    padding: 0.45rem 1.2rem; border-radius: 6px;
+    font-size: 0.82rem; font-weight: 600; text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--green-light); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 88vh;
+    background: linear-gradient(135deg, #edf7f3 0%, #f0f7ff 60%, #fdf8f0 100%);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; position: relative; overflow: hidden;
+    padding: 7rem 2rem 5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--green-pale); border: 1px solid rgba(42,125,90,0.25);
+    color: var(--green); font-size: 0.72rem; letter-spacing: 0.15em;
+    text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 20px;
+    margin-bottom: 1.8rem; font-weight: 600;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 400;
+    color: var(--navy); line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .hero h1 em { color: var(--green); font-style: italic; }
+  .hero-sub {
+    font-size: 1rem; color: var(--grey); margin-bottom: 2.5rem;
+    max-width: 460px;
+  }
+  .hero-stats {
+    display: flex; gap: 0; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);
+  }
+  .hero-stat {
+    text-align: center; padding: 1.4rem 2.2rem;
+    border-right: 1px solid var(--border);
+  }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 600; color: var(--green); display: block; line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .hero-stat .lbl {
+    font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--grey-mid); font-weight: 500;
+  }
+  .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+  .btn-primary {
+    background: var(--green); color: var(--white);
+    padding: 0.8rem 1.8rem; border-radius: 8px;
+    font-weight: 600; font-size: 0.88rem; text-decoration: none;
+    transition: all 0.2s; border: none; cursor: pointer; font-family: inherit;
+  }
+  .btn-primary:hover { background: var(--green-light); transform: translateY(-1px); box-shadow: var(--shadow); }
+  .btn-outline {
+    background: var(--white); color: var(--navy);
+    border: 1px solid var(--border);
+    padding: 0.8rem 1.8rem; border-radius: 8px;
+    font-weight: 500; font-size: 0.88rem; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--green); color: var(--green); }
+  .scroll-hint {
+    position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+    color: var(--grey-mid); font-size: 0.7rem; letter-spacing: 0.12em;
+    text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  }
+  .scroll-arrow { width: 1px; height: 32px; background: linear-gradient(to bottom, var(--green), transparent); }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--green); font-weight: 700; margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 400; line-height: 1.2;
+    color: var(--navy); margin-bottom: 1rem;
+  }
+  .section-title em { color: var(--green); font-style: italic; }
+  .section-lead {
+    font-size: 0.95rem; line-height: 1.75; color: var(--grey);
+    max-width: 560px; margin-bottom: 2.5rem;
+  }
+  .divider-green {
+    width: 40px; height: 3px; background: var(--green);
+    border-radius: 2px; margin-bottom: 1.8rem;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .fact-card {
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 1.2rem 1.4rem; border-radius: 10px;
+  }
+  .fact-card .val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem; font-weight: 600; color: var(--green); display: block; line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .fact-card .key { font-size: 0.78rem; color: var(--grey); line-height: 1.4; }
+  .about-highlights { display: flex; flex-direction: column; gap: 1rem; }
+  .highlight {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.2rem 1.4rem; background: var(--bg); border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .highlight-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .highlight h4 { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.25rem; color: var(--navy); }
+  .highlight p { font-size: 0.82rem; color: var(--grey); line-height: 1.6; }
+
+  /* ── CONDOS ── */
+  #condos { background: var(--bg); }
+  .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .filter-btn {
+    padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid var(--border);
+    font-size: 0.8rem; cursor: pointer; background: var(--white);
+    color: var(--grey); font-weight: 500; transition: all 0.2s; font-family: inherit;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--green); color: var(--white); border-color: var(--green);
+  }
+  .condos-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem;
+  }
+  .condo-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .condo-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .condo-card-header {
+    background: var(--green-pale); padding: 1.2rem 1.4rem;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    border-bottom: 1px solid rgba(42,125,90,0.12);
+  }
+  .condo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 600; color: var(--navy); line-height: 1.2;
+  }
+  .rps-badge {
+    background: var(--gold); color: var(--white);
+    font-size: 0.68rem; font-weight: 700; padding: 0.2rem 0.55rem;
+    border-radius: 4px; letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0;
+  }
+  .rps-badge.grade-s { background: #16a34a; }
+  .rps-badge.grade-a { background: #2563eb; }
+  .rps-badge.grade-b { background: #d97706; }
+  .rps-badge.grade-c { background: #ea580c; }
+  .condo-card-body { padding: 1.2rem 1.4rem; }
+  .condo-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.9rem; }
+  .condo-meta-item .mk { font-size: 0.68rem; color: var(--grey-mid); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.1rem; }
+  .condo-meta-item .mv { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+  .condo-notes { font-size: 0.78rem; color: var(--grey); margin-bottom: 0.8rem; line-height: 1.5; }
+  .condo-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .tag { background: var(--grey-light); color: var(--grey); font-size: 0.7rem; padding: 0.18rem 0.55rem; border-radius: 10px; }
+  .tag.fh { background: #dcfce7; color: #15803d; }
+  .tag.lh { background: #dbeafe; color: #1d4ed8; }
+
+  /* ── TRANSACTIONS ── */
+  #transactions { background: var(--white); }
+  .tx-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+  .tx-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .tx-table th {
+    text-align: left; padding: 0.85rem 1.2rem;
+    font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--grey); background: var(--bg); border-bottom: 1px solid var(--border);
+    font-weight: 600; white-space: nowrap;
+  }
+  .tx-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--navy); }
+  .tx-table tr:last-child td { border-bottom: none; }
+  .tx-table tr:hover td { background: var(--bg); }
+  .psf-tag {
+    font-size: 0.75rem; color: var(--green); font-weight: 600;
+    background: var(--green-pale); padding: 0.15rem 0.5rem; border-radius: 4px;
+  }
+  .price-cell { font-weight: 600; }
+
+  /* ── SCHOOLS ── */
+  #schools { background: var(--bg); }
+  .schools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+  .school-level { margin-bottom: 2.5rem; }
+  .school-level-title {
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--green); font-weight: 700; margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .school-level-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .school-card {
+    background: var(--white); border: 1px solid var(--border);
+    padding: 1rem 1.2rem; border-radius: 10px;
+    display: flex; gap: 0.9rem; align-items: flex-start;
+    transition: box-shadow 0.2s;
+  }
+  .school-card:hover { box-shadow: var(--shadow); }
+  .school-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--green-pale); display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0;
+  }
+  .school-info h4 { font-size: 0.86rem; font-weight: 600; margin-bottom: 0.15rem; color: var(--navy); line-height: 1.3; }
+  .school-info p { font-size: 0.76rem; color: var(--grey); }
+  .school-dist {
+    font-size: 0.68rem; background: var(--green-pale); color: var(--green);
+    padding: 0.1rem 0.45rem; border-radius: 3px; margin-top: 0.3rem; display: inline-block; font-weight: 600;
+  }
+
+  /* ── RPS SECTION ── */
+  #rps { background: var(--white); }
+  .rps-explainer { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2.5rem; }
+  .rps-factors { display: flex; flex-direction: column; gap: 0.6rem; }
+  .rps-factor {
+    display: flex; gap: 1rem; align-items: center;
+    padding: 0.9rem 1.2rem; border: 1px solid var(--border);
+    border-radius: 8px; background: var(--bg);
+  }
+  .factor-icon { font-size: 1.1rem; width: 28px; text-align: center; }
+  .factor-label { font-size: 0.85rem; font-weight: 500; flex: 1; color: var(--navy); }
+  .factor-weight { font-size: 0.72rem; color: var(--green); font-weight: 700; background: var(--green-pale); padding: 0.15rem 0.5rem; border-radius: 4px; }
+  .rps-grades { display: flex; flex-direction: column; gap: 0.75rem; }
+  .grade-row {
+    display: flex; gap: 1rem; align-items: center;
+    padding: 0.9rem 1.2rem; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .grade-letter {
+    width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 1rem; border-radius: 8px; flex-shrink: 0; color: white;
+  }
+  .grade-row h4 { font-size: 0.86rem; font-weight: 600; margin-bottom: 0.15rem; color: var(--navy); }
+  .grade-row p { font-size: 0.78rem; color: var(--grey); line-height: 1.5; }
+  .rps-cta-box {
+    margin-top: 2.5rem; padding: 2rem; border: 1px solid var(--border);
+    border-radius: 12px; text-align: center; background: var(--green-pale);
+    grid-column: 1 / -1;
+  }
+  .rps-cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.6rem; }
+  .rps-cta-box p { color: var(--grey); margin-bottom: 1.2rem; line-height: 1.7; font-size: 0.9rem; }
+
+  /* ── LOCATION ── */
+  #location { background: var(--bg); }
+  .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .amenity-group { margin-bottom: 1.8rem; }
+  .amenity-group h4 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--green); font-weight: 700; margin-bottom: 0.7rem;
+  }
+  .amenity-list { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+  .amenity-list li {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    font-size: 0.86rem; color: var(--navy);
+  }
+  .amenity-list li::before { content: '→'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+  .map-placeholder {
+    background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+    padding: 2rem; display: flex; flex-direction: column; align-items: stretch;
+    min-height: 380px;
+  }
+  .map-badge {
+    background: var(--green); color: white;
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.4rem 0.9rem; border-radius: 6px; font-weight: 700;
+    margin-bottom: 1.2rem; display: inline-block; align-self: flex-start;
+  }
+  .map-mrt-list { display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+  .mrt-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.65rem 0.9rem; background: var(--bg);
+    border-radius: 8px; border: 1px solid var(--border);
+  }
+  .mrt-name { font-size: 0.84rem; color: var(--navy); }
+  .mrt-line { font-size: 0.7rem; padding: 0.15rem 0.55rem; border-radius: 4px; font-weight: 700; }
+  .ew { background: #009F6B; color: white; }
+  .dt { background: #005DA9; color: white; }
+  .cr { background: #97329e; color: white; }
+  .map-note { font-size: 0.75rem; color: var(--grey-mid); margin-top: 1rem; line-height: 1.5; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--white); }
+  .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .contact-form {
+    background: var(--bg); padding: 2rem; border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .form-row { margin-bottom: 1rem; }
+  .form-row label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--navy); margin-bottom: 0.35rem; }
+  .form-row input, .form-row select, .form-row textarea {
+    width: 100%; padding: 0.65rem 0.9rem;
+    border: 1px solid var(--border); border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+    background: var(--white); color: var(--navy);
+    outline: none; transition: border-color 0.2s;
+  }
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(42,125,90,0.08); }
+  .form-row textarea { height: 90px; resize: vertical; }
+  .form-submit {
+    width: 100%; padding: 0.85rem; background: var(--green);
+    color: var(--white); border: none; border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .form-submit:hover { background: var(--green-light); }
+  .contact-info > p { font-size: 0.9rem; color: var(--grey); line-height: 1.7; margin-bottom: 1.8rem; }
+  .agent-card {
+    background: var(--navy); border-radius: 12px; padding: 1.8rem; margin-bottom: 1.2rem;
+  }
+  .agent-name { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); font-weight: 400; margin-bottom: 0.2rem; }
+  .agent-title { font-size: 0.78rem; color: rgba(255,255,255,0.55); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.2rem; }
+  .agent-links { display: flex; flex-direction: column; gap: 0.55rem; }
+  .agent-link {
+    display: flex; align-items: center; gap: 0.7rem;
+    font-size: 0.88rem; color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s;
+  }
+  .agent-link:hover { color: #6ee7b7; }
+  .agent-link-icon { font-size: 1rem; width: 22px; text-align: center; }
+  .social-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .proof-item {
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 1rem; border-radius: 10px; text-align: center;
+  }
+  .proof-item .num { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--green); display: block; line-height: 1; margin-bottom: 0.2rem; }
+  .proof-item .lbl { font-size: 0.72rem; color: var(--grey); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); padding: 2.5rem 2rem; text-align: center; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #6ee7b7; margin-bottom: 0.8rem; }
+  footer p { font-size: 0.76rem; color: rgba(255,255,255,0.35); line-height: 1.9; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer a:hover { color: #6ee7b7; }
+
+  /* ── ANIMATIONS ── */
+  .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s, transform 0.5s; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 1.2rem; }
+    .nav-links { display: none; }
+    .about-grid, .rps-explainer, .location-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { flex-direction: column; gap: 0; border-radius: 12px; }
+    .hero-stat { border-right: none; border-bottom: 1px solid var(--border); }
+    .hero-stat:last-child { border-bottom: none; }
+    section { padding: 3.5rem 1.2rem; }
+    .contact-form { padding: 1.5rem; }
+    .rps-cta-box { grid-column: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">District 18 · SG</a>
+  <ul class="nav-links">
+    <li><a href="#about">About D18</a></li>
+    <li><a href="#condos">Condos</a></li>
+    <li><a href="#transactions">Transactions</a></li>
+    <li><a href="#schools">Schools</a></li>
+    <li><a href="#rps">RPS Score</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get Expert Advice</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">Singapore · District 18 · Tampines</div>
+  <h1>Your Complete Guide to<br><em>Tampines</em></h1>
+  <p class="hero-sub">Everything you need to make a confident property decision</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="num">9</span>
+      <span class="lbl">Condo Projects</span>
+    </div>
+    <div class="hero-stat">
+      <span class="num">$1,437</span>
+      <span class="lbl">Median PSF</span>
+    </div>
+    <div class="hero-stat">
+      <span class="num">$3,500</span>
+      <span class="lbl">Typical Monthly Rent</span>
+    </div>
+    <div class="hero-stat">
+      <span class="num">10,240</span>
+      <span class="lbl">Sale Transactions (5yr)</span>
+    </div>
+  </div>
+  <div class="hero-actions">
+    <a href="#condos" class="btn-primary">Browse All Condos</a>
+    <a href="#rps" class="btn-outline">View RPS Scores</a>
+  </div>
+  <div class="scroll-hint">
+    <span>Explore</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid fade-in">
+      <div>
+        <p class="section-tag">About District 18</p>
+        <h2 class="section-title">Tampines —<br><em>Singapore's Eastern Hub</em></h2>
+        <div class="divider-green"></div>
+        <p class="section-lead">Tampines is one of Singapore's most established and self-contained new towns. With multiple MRT lines, a world-class retail hub, strong schools, and competitive pricing, Tampines consistently attracts owner-occupier families and savvy investors looking for value in the East.</p>
+        <div class="about-facts">
+          <div class="fact-card">
+            <span class="val">6.3%</span>
+            <span class="key">Below nearby district median PSF — a potential value opportunity</span>
+          </div>
+          <div class="fact-card">
+            <span class="val">+26.2%</span>
+            <span class="key">Sale PSF rise over last 3 months (2026)</span>
+          </div>
+          <div class="fact-card">
+            <span class="val">53</span>
+            <span class="key">Tracked condo projects with transaction data</span>
+          </div>
+          <div class="fact-card">
+            <span class="val">2 MRT Lines</span>
+            <span class="key">EW Line + Cross Island Line (CRL) coming</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight">
+          <div class="highlight-icon">🌳</div>
+          <div>
+            <h4>Green Living in the East</h4>
+            <p>Tampines Eco Green, Bedok Reservoir, Tampines Quarry, and the nearby coast give residents abundant green and recreational spaces rarely found in suburban Singapore.</p>
+          </div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🚇</div>
+          <div>
+            <h4>Exceptional Connectivity</h4>
+            <p>Served by Tampines, Tampines East, and Tampines West MRT stations across two lines (EW & DT). The upcoming Cross Island Line (CRL) adds Tampines North — making Tampines one of the best-connected towns outside the city centre.</p>
+          </div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🏫</div>
+          <div>
+            <h4>Outstanding School Belt</h4>
+            <p>Home to multiple top primary schools, St. Hilda's Secondary, two junior colleges (Tampines Meridian JC & Temasek JC), and Temasek Polytechnic — ideal for families at every stage.</p>
+          </div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🛍️</div>
+          <div>
+            <h4>Singapore's Best Suburban Retail</h4>
+            <p>Tampines Mall, Century Square, Tampines 1, IKEA, Courts Megastore, and Our Tampines Hub make Tampines arguably the finest retail and lifestyle suburb in Singapore.</p>
+          </div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">📈</div>
+          <div>
+            <h4>Value Relative to Peers</h4>
+            <p>D18 median PSF sits 6.3% below nearby districts, with sale PSF up 26.2% in the last quarter. The CRL catalyst and Tampines North development add meaningful upside potential.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDOS -->
+<section id="condos">
+  <div class="container">
+    <p class="section-tag">Condo Directory</p>
+    <h2 class="section-title">Condos in <em>Tampines</em></h2>
+    <div class="divider-green"></div>
+    <p class="section-lead">Every private condo project in Tampines, with tenure, approximate pricing and RPS grade from the Resale Project Scorecard.</p>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterCondos('all', this)">All Projects</button>
+      <button class="filter-btn" onclick="filterCondos('freehold', this)">Freehold</button>
+      <button class="filter-btn" onclick="filterCondos('leasehold', this)">Leasehold</button>
+      <button class="filter-btn" onclick="filterCondos('completed', this)">Completed</button>
+      <button class="filter-btn" onclick="filterCondos('new', this)">New / UC</button>
+    </div>
+    <div class="condos-grid" id="condos-grid">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- TRANSACTIONS -->
+<section id="transactions">
+  <div class="container">
+    <p class="section-tag">Past Transactions</p>
+    <h2 class="section-title">Recent Resale <em>Transactions</em></h2>
+    <div class="divider-green"></div>
+    <p class="section-lead">Representative recent transactions across District 18 condos. Data based on URA caveats. For a full transaction history of any specific project, request the report below.</p>
+    <div class="tx-table-wrap">
+      <table class="tx-table">
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Type</th>
+            <th>Area (sqft)</th>
+            <th>Floor</th>
+            <th>Date</th>
+            <th>Price</th>
+            <th>PSF</th>
+          </tr>
+        </thead>
+        <tbody id="tx-tbody">
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.75rem; color:var(--grey); margin-top:1.2rem;">* Representative data based on URA caveats. Actual transactions may vary. Contact agent for comprehensive transaction history.</p>
+  </div>
+</section>
+
+<!-- SCHOOLS -->
+<section id="schools">
+  <div class="container">
+    <p class="section-tag">Education</p>
+    <h2 class="section-title">Schools in <em>Tampines</em></h2>
+    <div class="divider-green"></div>
+    <p class="section-lead">Tampines has one of the most comprehensive school belts in Singapore — from top primary schools to junior colleges and polytechnics, all within the town.</p>
+
+    <div class="school-level">
+      <div class="school-level-title">Primary Schools</div>
+      <div class="schools-grid">
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div class="school-info">
+            <h4>Casuarina Primary School</h4>
+            <p>Tampines Ave 5</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div class="school-info">
+            <h4>Gongshang Primary School</h4>
+            <p>Tampines St 22</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div class="school-info">
+            <h4>Junyuan Primary School</h4>
+            <p>Tampines Ave 9</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div class="school-info">
+            <h4>Poi Ching School</h4>
+            <p>Tampines St 22</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div class="school-info">
+            <h4>Tampines Primary School</h4>
+            <p>Tampines Ave 3</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div class="school-info">
+            <h4>Yumin Primary School</h4>
+            <p>Tampines St 71</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div class="school-info">
+            <h4>Chongzheng Primary School</h4>
+            <p>Tampines St 81</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div class="school-info">
+            <h4>Tampines North Primary School</h4>
+            <p>Tampines North Dr 2</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="school-level">
+      <div class="school-level-title">Secondary Schools</div>
+      <div class="schools-grid">
+        <div class="school-card">
+          <div class="school-icon">🎓</div>
+          <div class="school-info">
+            <h4>Tampines Secondary School</h4>
+            <p>Tampines Ave 9</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🎓</div>
+          <div class="school-info">
+            <h4>East Spring Secondary School</h4>
+            <p>Tampines Ave 9</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🎓</div>
+          <div class="school-info">
+            <h4>Dunman Secondary School</h4>
+            <p>Tampines Ave 7</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🎓</div>
+          <div class="school-info">
+            <h4>St. Hilda's Secondary School</h4>
+            <p>Tampines Ave 8</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🎓</div>
+          <div class="school-info">
+            <h4>Junyuan Secondary School</h4>
+            <p>Tampines Ave 9</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🎓</div>
+          <div class="school-info">
+            <h4>Tampines Changkat Secondary</h4>
+            <p>Tampines St 34</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="school-level">
+      <div class="school-level-title">Junior Colleges & Tertiary</div>
+      <div class="schools-grid">
+        <div class="school-card">
+          <div class="school-icon">🏛️</div>
+          <div class="school-info">
+            <h4>Tampines Meridian Junior College</h4>
+            <p>Tampines Ave 9</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏛️</div>
+          <div class="school-info">
+            <h4>Temasek Junior College</h4>
+            <p>Tampines Ave 9</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏛️</div>
+          <div class="school-info">
+            <h4>Temasek Polytechnic</h4>
+            <p>Tampines Ave 9</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-icon">🏛️</div>
+          <div class="school-info">
+            <h4>United World College SEA (East)</h4>
+            <p>Tampines St 73</p>
+            <span class="school-dist">Within Tampines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RPS -->
+<section id="rps">
+  <div class="container">
+    <p class="section-tag">Resale Project Scorecard</p>
+    <h2 class="section-title">How We Score <em>Every Condo</em></h2>
+    <div class="divider-green"></div>
+    <p class="section-lead">The RPS (Resale Project Scorecard) is an independent scoring system built by Silas @ Huttons and TribeSG. It evaluates every resale condo in Singapore across 7 weighted factors — no spin, no sales bias.</p>
+    <div class="rps-explainer">
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--navy); margin-bottom:1.2rem;">The 7 Scoring Factors</h3>
+        <div class="rps-factors">
+          <div class="rps-factor"><div class="factor-icon">🚇</div><div class="factor-label">MRT Proximity & Accessibility</div><div class="factor-weight">High</div></div>
+          <div class="rps-factor"><div class="factor-icon">🏫</div><div class="factor-label">School Proximity (1km / 2km)</div><div class="factor-weight">High</div></div>
+          <div class="rps-factor"><div class="factor-icon">📅</div><div class="factor-label">Remaining Lease (Tenure Health)</div><div class="factor-weight">Medium</div></div>
+          <div class="rps-factor"><div class="factor-icon">📊</div><div class="factor-label">Transaction Volume & Liquidity</div><div class="factor-weight">Medium</div></div>
+          <div class="rps-factor"><div class="factor-icon">💹</div><div class="factor-label">Price Appreciation Trend</div><div class="factor-weight">Medium</div></div>
+          <div class="rps-factor"><div class="factor-icon">🏢</div><div class="factor-label">Facilities & Project Size</div><div class="factor-weight">Low</div></div>
+          <div class="rps-factor"><div class="factor-icon">🏙️</div><div class="factor-label">Precinct & Future Development</div><div class="factor-weight">Low</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--navy); margin-bottom:1.2rem;">Grade Breakdown</h3>
+        <div class="rps-grades">
+          <div class="grade-row" style="background:#f0fdf4; border-color:#bbf7d0;">
+            <div class="grade-letter" style="background:#16a34a;">S</div>
+            <div>
+              <h4>Exceptional</h4>
+              <p>Top-tier MRT access, strong school, healthy lease, high liquidity. Rare — only the best projects qualify.</p>
+            </div>
+          </div>
+          <div class="grade-row" style="background:#eff6ff; border-color:#bfdbfe;">
+            <div class="grade-letter" style="background:#2563eb;">A</div>
+            <div>
+              <h4>Very Good</h4>
+              <p>Strong fundamentals across most factors. Solid buy for owner-occupiers and investors.</p>
+            </div>
+          </div>
+          <div class="grade-row" style="background:#fffbeb; border-color:#fde68a;">
+            <div class="grade-letter" style="background:#d97706;">B</div>
+            <div>
+              <h4>Good</h4>
+              <p>Above-average fundamentals. Good for own stay; invest selectively depending on unit stack and price.</p>
+            </div>
+          </div>
+          <div class="grade-row" style="background:#fff7ed; border-color:#fed7aa;">
+            <div class="grade-letter" style="background:#ea580c;">C</div>
+            <div>
+              <h4>Average</h4>
+              <p>Trade-offs exist (lease, MRT, or school). Still viable — price accordingly and understand the compromises.</p>
+            </div>
+          </div>
+          <div class="grade-row" style="background:#fef2f2; border-color:#fecaca;">
+            <div class="grade-letter" style="background:#dc2626;">D</div>
+            <div>
+              <h4>Below Average</h4>
+              <p>Significant weaknesses in key factors. Approach with caution — ensure price reflects the risks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rps-cta-box">
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--white); margin-bottom:0.8rem;">Get the Full RPS for Any D18 Condo</h3>
+          <p>The complete Resale Project Scorecard covers 2,400+ condos across all Singapore districts. I can pull the full RPS score, factor breakdown, and transaction analysis for any specific project you're considering.</p>
+          <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+            <a href="https://tribesg.com/rps" target="_blank" class="btn-primary">View RPS on TribeSG →</a>
+            <a href="#contact" class="btn-outline">Request D18 Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="container">
+    <p class="section-tag">Location & Connectivity</p>
+    <h2 class="section-title">Living in <em>Tampines</em></h2>
+    <div class="divider-green"></div>
+    <div class="location-grid">
+      <div>
+        <div class="amenity-group">
+          <h4>Shopping & Dining</h4>
+          <ul class="amenity-list">
+            <li>Tampines Mall · Century Square · Tampines 1</li>
+            <li>IKEA Tampines & Courts Megastore</li>
+            <li>Our Tampines Hub (Library, Sports, CC)</li>
+            <li>Tampines Round Market & Food Centre</li>
+            <li>Changi City Point (~10 min via EW)</li>
+          </ul>
+        </div>
+        <div class="amenity-group">
+          <h4>Parks & Recreation</h4>
+          <ul class="amenity-list">
+            <li>Tampines Eco Green</li>
+            <li>Tampines Quarry & Bedok Reservoir (~10 min)</li>
+            <li>Tampines Swimming Complex</li>
+            <li>Our Tampines Hub Sports Facilities</li>
+            <li>Tampines Town Park</li>
+          </ul>
+        </div>
+        <div class="amenity-group">
+          <h4>Healthcare</h4>
+          <ul class="amenity-list">
+            <li>Changi General Hospital (~10 min drive)</li>
+            <li>Tampines Polyclinic</li>
+            <li>Numerous GP clusters throughout Tampines</li>
+          </ul>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-badge">MRT Stations in Tampines</div>
+        <div class="map-mrt-list">
+          <div class="mrt-item">
+            <span class="mrt-name">📍 Tampines MRT</span>
+            <span class="mrt-line ew">EW2</span>
+          </div>
+          <div class="mrt-item">
+            <span class="mrt-name">📍 Tampines East MRT</span>
+            <span class="mrt-line dt">DT33</span>
+          </div>
+          <div class="mrt-item">
+            <span class="mrt-name">📍 Tampines West MRT</span>
+            <span class="mrt-line dt">DT31</span>
+          </div>
+          <div class="mrt-item">
+            <span class="mrt-name">📍 Simei MRT</span>
+            <span class="mrt-line ew">EW3</span>
+          </div>
+          <div class="mrt-item">
+            <span class="mrt-name">📍 Expo MRT</span>
+            <span class="mrt-line ew">CG1</span>
+          </div>
+          <div class="mrt-item" style="border-color:rgba(151,50,158,0.3);">
+            <span class="mrt-name">🚧 Tampines North MRT <em style="font-size:0.72rem;color:var(--grey-mid);">(upcoming)</em></span>
+            <span class="mrt-line cr">CRL</span>
+          </div>
+        </div>
+        <p class="map-note">Cross Island Line (CRL) Phase 1 will further enhance Tampines connectivity when completed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <p class="section-tag">Talk to an Expert</p>
+        <h2 class="section-title">Ready to Make a<br><em>Confident Move?</em></h2>
+        <div class="divider-green"></div>
+        <p>Whether you're selling your D18 property, buying your first condo, or evaluating an investment — get a data-driven view from an agent who lives and breathes District 18.</p>
+        <div class="agent-card">
+          <div class="agent-name">Teresa Low</div>
+          <div class="agent-title">Associate · Huttons Asia</div>
+          <div class="agent-links">
+            <a href="tel:+6596436820" class="agent-link">
+              <span class="agent-link-icon">📞</span> +65 9643 6820
+            </a>
+            <a href="https://wa.me/6596436820?text=Hi%20Teresa%2C%20I%20found%20your%20Tampines%20guide%20and%20would%20like%20to%20know%20more." target="_blank" class="agent-link">
+              <span class="agent-link-icon">💬</span> WhatsApp Teresa
+            </a>
+            <a href="https://tribesg.com" target="_blank" class="agent-link">
+              <span class="agent-link-icon">🌐</span> tribesg.com
+            </a>
+          </div>
+        </div>
+        <div class="social-proof">
+          <div class="proof-item">
+            <span class="num">2,400+</span>
+            <span class="lbl">Condos Scored (RPS)</span>
+          </div>
+          <div class="proof-item">
+            <span class="num">D18</span>
+            <span class="lbl">Specialist Focus</span>
+          </div>
+          <div class="proof-item">
+            <span class="num">Huttons</span>
+            <span class="lbl">Asia's Top Agency</span>
+          </div>
+          <div class="proof-item">
+            <span class="num">Data-First</span>
+            <span class="lbl">No Spin, No Bias</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; margin-bottom:1.2rem; color:var(--navy);">Send an Enquiry</h3>
+        <div class="form-row">
+          <label>Full Name *</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label>Phone *</label>
+          <input type="tel" placeholder="+65 9XXX XXXX">
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-row">
+          <label>I am looking to…</label>
+          <select>
+            <option value="">Select one</option>
+            <option>Buy a condo in D18</option>
+            <option>Sell my D18 property</option>
+            <option>Rent a condo in D18</option>
+            <option>Get an RPS analysis</option>
+            <option>Get a free valuation</option>
+            <option>General enquiry</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Budget / Unit Size (optional)</label>
+          <select>
+            <option value="">Select budget range</option>
+            <option>Under $800,000</option>
+            <option>$800K – $1.2M</option>
+            <option>$1.2M – $1.8M</option>
+            <option>$1.8M – $2.5M</option>
+            <option>Above $2.5M</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Message (optional)</label>
+          <textarea placeholder="E.g. I'm looking at Treasure at Tampines, 3BR, around $1.4M. Can you share the RPS score and recent transactions?"></textarea>
+        </div>
+        <button class="form-submit" onclick="handleSubmit()">Send Enquiry →</button>
+        <p style="font-size:0.72rem; color:var(--grey); margin-top:0.75rem; line-height:1.6;">By submitting, you consent to being contacted by Teresa Low @ Huttons regarding your property enquiry, in accordance with PDPA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">District 18 · SG</div>
+  <p>
+    A resource by <a href="https://tribesg.com" target="_blank">TribeSG</a> &amp; Teresa Low @ <a href="https://www.huttons.com.sg" target="_blank">Huttons Asia</a> · CEA Licence L3008899K<br>
+    All pricing, PSF, and transaction data are indicative based on URA caveats and market data. Verify with agent before any commitment.<br>
+    <a href="https://tribesg.com/rps" target="_blank">Resale Project Scorecard (RPS)</a> · <a href="#contact">Contact Teresa</a>
+  </p>
+  <p style="margin-top:1rem;">© 2026 Huttons Asia Pte Ltd. All rights reserved.</p>
+</footer>
+
+<script>
+  // ── CONDO DATA ── (Tampines only)
+  const condos = [
+    { name: "Parktown Residence", tenure: "leasehold", status: "new", psf: "$2,369", beds: "1–5BR", grade: "A", year: "UC", notes: "Tampines St 62 · Integrated development with Tampines North MRT" },
+    { name: "Treasure at Tampines", tenure: "leasehold", status: "completed", psf: "$1,350", beds: "1–5BR", grade: "A", year: "2022", notes: "Tampines St 86 · Largest condo in Singapore · 2,203 units" },
+    { name: "The Tapestry", tenure: "leasehold", status: "completed", psf: "$1,380", beds: "1–5BR", grade: "B", year: "2021", notes: "Tampines St 86 · Near Tampines Hub" },
+    { name: "The Palette", tenure: "leasehold", status: "completed", psf: "$1,100", beds: "1–4BR", grade: "B", year: "2015", notes: "Tampines St 86 · CDL development" },
+    { name: "The Santorini", tenure: "leasehold", status: "completed", psf: "$1,120", beds: "1–5BR", grade: "B", year: "2017", notes: "Tampines St 86 · MCC Land · Near Tampines Quarry" },
+    { name: "The Alps Residences", tenure: "leasehold", status: "completed", psf: "$1,050", beds: "1–5BR", grade: "C", year: "2019", notes: "Tampines Ave 10 · MCC Land" },
+    { name: "Tenet", tenure: "leasehold", status: "completed", psf: "$1,474", beds: "2–5BR", grade: "A", year: "2025", notes: "Tampines St 62 · EC, TOP 2025 · Near Tampines North MRT" },
+
+    { name: "Modena", tenure: "leasehold", status: "completed", psf: "$1,050", beds: "3–5BR", grade: "B", year: "2001", notes: "Tampines · Rising transaction volume +46.7%" },
+    { name: "Q Bay Residences", tenure: "leasehold", status: "completed", psf: "$1,150", beds: "1–5BR", grade: "B", year: "2016", notes: "Tampines St 86 · Frasers development" },
+  ];
+
+  let activeFilter = 'all';
+
+  function filterCondos(filter, btn) {
+    activeFilter = filter;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderCondos();
+  }
+
+  function renderCondos() {
+    const grid = document.getElementById('condos-grid');
+    const filtered = condos.filter(c => {
+      if (activeFilter === 'all') return true;
+      if (activeFilter === 'freehold') return c.tenure === 'freehold';
+      if (activeFilter === 'leasehold') return c.tenure === 'leasehold';
+      if (activeFilter === 'completed') return c.status === 'completed';
+      if (activeFilter === 'new') return c.status === 'new';
+      return true;
+    });
+    grid.innerHTML = filtered.map(c => `
+      <div class="condo-card">
+        <div class="condo-card-header">
+          <div class="condo-name">${c.name}</div>
+          <div class="rps-badge grade-${c.grade.toLowerCase()}">RPS · ${c.grade}</div>
+        </div>
+        <div class="condo-card-body">
+          <div class="condo-meta">
+            <div class="condo-meta-item">
+              <div class="mk">Avg PSF</div>
+              <div class="mv">${c.psf}</div>
+            </div>
+            <div class="condo-meta-item">
+              <div class="mk">Unit Types</div>
+              <div class="mv">${c.beds}</div>
+            </div>
+            <div class="condo-meta-item">
+              <div class="mk">TOP Year</div>
+              <div class="mv">${c.year}</div>
+            </div>
+            <div class="condo-meta-item">
+              <div class="mk">Tenure</div>
+              <div class="mv">${c.tenure === 'freehold' ? 'Freehold' : '99-yr LH'}</div>
+            </div>
+          </div>
+          <p class="condo-notes">${c.notes}</p>
+          <div class="condo-tags">
+            <span class="tag ${c.tenure === 'freehold' ? 'fh' : 'lh'}">${c.tenure === 'freehold' ? '🟢 Freehold' : '🔵 Leasehold'}</span>
+            ${c.status === 'new' ? '<span class="tag" style="background:#fef3c7;color:#92400e;">🚧 Under Construction</span>' : ''}
+            <span class="tag">D18</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // ── TRANSACTIONS DATA ── (Tampines only)
+  const transactions = [
+    { project: "Parktown Residence", type: "3BR", area: "958", floor: "Mid", date: "May 2026", price: "$1,820,000", psf: "$1,900" },
+    { project: "Treasure at Tampines", type: "3BR", area: "1,001", floor: "Mid", date: "May 2026", price: "$1,380,000", psf: "$1,379" },
+    { project: "Tenet (EC)", type: "4BR", area: "1,259", floor: "High", date: "Apr 2026", price: "$1,760,000", psf: "$1,398" },
+    { project: "The Tapestry", type: "4BR", area: "1,389", floor: "High", date: "Mar 2026", price: "$1,920,000", psf: "$1,382" },
+    { project: "Q Bay Residences", type: "3BR", area: "1,098", floor: "Mid", date: "Mar 2026", price: "$1,260,000", psf: "$1,148" },
+    { project: "The Santorini", type: "3BR", area: "1,012", floor: "Mid", date: "Feb 2026", price: "$1,140,000", psf: "$1,127" },
+    { project: "Treasure at Tampines", type: "2BR", area: "667", floor: "High", date: "Jan 2026", price: "$920,000", psf: "$1,379" },
+    { project: "The Palette", type: "3BR", area: "1,087", floor: "Low", date: "Jan 2026", price: "$1,190,000", psf: "$1,095" },
+    { project: "Modena", type: "3BR", area: "1,076", floor: "Mid", date: "Dec 2025", price: "$1,130,000", psf: "$1,050" },
+    { project: "The Alps Residences", type: "4BR", area: "1,324", floor: "High", date: "Dec 2025", price: "$1,390,000", psf: "$1,050" },
+
+  ];
+
+  function renderTransactions() {
+    const tbody = document.getElementById('tx-tbody');
+    tbody.innerHTML = transactions.map(t => `
+      <tr>
+        <td><strong>${t.project}</strong></td>
+        <td>${t.type}</td>
+        <td>${t.area} sqft</td>
+        <td>${t.floor}</td>
+        <td>${t.date}</td>
+        <td class="price-cell">${t.price}</td>
+        <td><span class="psf-tag">${t.psf}</span></td>
+      </tr>
+    `).join('');
+  }
+
+  // ── FORM SUBMIT ──
+  function handleSubmit() {
+    const wa = "https://wa.me/6596436820?text=Hi%20Teresa%2C%20I%20found%20your%20Tampines%20guide%20and%20would%20like%20to%20make%20an%20enquiry.";
+    alert("Thanks! You'll be connected with Teresa via WhatsApp.");
+    window.open(wa, '_blank');
+  }
+
+  // ── SCROLL ANIMATIONS ──
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── INIT ──
+  renderCondos();
+  renderTransactions();
+</script>
+</body>
+</html>
